@@ -11,4 +11,9 @@ node
     echo "hello testing git..."
     bat(/mvn package/)
   }
+  stage('Results') 
+  {
+     junit '**/target/surefire-reports/TEST-*.xml'
+     archiveArtifacts 'target/*.jar'
+    }
 }
