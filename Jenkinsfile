@@ -1,10 +1,10 @@
 node
 {
-  /*stage("fetch")
+  stage("fetch")
   {
-    //git "https://github.com/G-Gowtham/java-automation"
-    checkout scm
-  }*/
+    git "https://github.com/G-Gowtham/java-automation.git"
+    //checkout scm
+  }
   
   stage("test")
   {
