@@ -6,7 +6,10 @@
   <artifactId>myapp</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
-
+  <build>
+   <finalName>myapp</finalName>
+  </build>
+ 
   <name>myapp</name>
   <url>http://maven.apache.org</url>
 
