@@ -14,7 +14,7 @@ node
   stage("Dockering")
   {
     echo "hello Dockering..."
-    bat(/docker build -t test ./)
+    bat(/docker build -t java_app ./)
   }
   
 }
