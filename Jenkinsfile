@@ -3,7 +3,6 @@ node
   stage("fetch")
   {
     git "https://github.com/G-Gowtham/java-automation.git"
-    //checkout scm
   }
   
   stage("test")
@@ -15,5 +14,6 @@ node
   {
      junit '**/target/surefire-reports/TEST-*.xml'
      archiveArtifacts 'target/*.jar'
+	 echo "${archiveArtifacts}"
     }
 }
