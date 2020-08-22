@@ -5,14 +5,21 @@ node
     git "https://github.com/G-Gowtham/java-automation.git"
   }
   
-  stage("test")
+  stage("build")
   {
-    echo "hello testing git..."
+    echo "hello packaging..."
     bat(/mvn package/)
   }
-  stage('Results') 
+  
+  stage("Dockering")
+  {
+    echo "hello Dockering..."
+    bat(/docker build -t test ./)
+  }
+  
+  /*stage('Results') 
   {
      junit '**/target/surefire-reports/TEST-*.xml'
      archiveArtifacts 'target/*.jar'
-    }
+  }*/
 }
