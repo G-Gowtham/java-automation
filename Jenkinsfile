@@ -8,13 +8,15 @@ node
   stage("build")
   {
     echo "hello packaging..."
-    bat(/mvn package/)
+    //bat(/mvn package/)
+	sh 'mvn package'
   }
   
   stage("Dockering")
   {
     echo "hello Dockering..."
-    bat(/docker build -t java_app ./)
+    //bat(/docker build -t java_app ./)
+	sh 'docker build -t java_app .'
   }
   
 }
